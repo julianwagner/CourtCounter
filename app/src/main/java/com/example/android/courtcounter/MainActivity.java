@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Team A by 1 point
      */
     public void addOneForTeamA(View view) {
-        scoreTeamA+=1;
+        scoreTeamA += 1;
         displayForTeamA(scoreTeamA);
     }
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Team A by 2 points
      */
     public void addTwoForTeamA(View view) {
-        scoreTeamA+=2;
+        scoreTeamA += 2;
         displayForTeamA(scoreTeamA);
     }
 
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Team A by 3 points
      */
     public void addThreeForTeamA(View view) {
-        scoreTeamA+=3;
+        scoreTeamA += 3;
         displayForTeamA(scoreTeamA);
     }
 
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Team B by 1 point
      */
     public void addOneForTeamB(View view) {
-        scoreTeamB+=1;
+        scoreTeamB += 1;
         displayForTeamB(scoreTeamB);
     }
 
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Team B by 2 points
      */
     public void addTwoForTeamB(View view) {
-        scoreTeamB+=2;
+        scoreTeamB += 2;
         displayForTeamB(scoreTeamB);
     }
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Team B by 3 points
      */
     public void addThreeForTeamB(View view) {
-        scoreTeamB+=3;
+        scoreTeamB += 3;
         displayForTeamB(scoreTeamB);
     }
 
@@ -77,5 +77,15 @@ public class MainActivity extends AppCompatActivity {
     public void displayForTeamB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Resets the scores for Team A and B
+     */
+    public void resetScores(View view) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
     }
 }
